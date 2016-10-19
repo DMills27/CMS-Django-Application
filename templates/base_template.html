@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    	<meta charset="utf-8" />
+    	{% load staticfiles %}
+        <link href="{{ STATIC_URL }}css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/main.js"></script>
+        <!--<meta name="viewport" content = "width=device-width, initial-scale=1.0">-->
+
+        <style type="text/css">
+			html,
+			body {
+			  height:100%
+			}
+		</style>
+    </head>
+
+  <body class="body" style="background-color:#f6f6f6">
+  	<div class="container" style="min-height:95%; ">
+  		<div class="row">
+			  <div class="col-sm-2">
+			  	<br>
+					<img src="{% static 'img/logo.jpg' %}" class="responsive-img" style='max-height:125px;' alt="face" align="left">
+			  </div>
+			  <div class="col-sm-10">
+				  <br>
+				  <center>
+				  <h3>CMS Web App </h3>
+				  </center>
+			  </div>
+		</div><hr>
+
+		<div class="row">
+		  <div class="col-sm-2">
+		  <br>
+
+		  <br>
+		   <!-- Great, til you resize. -->
+			<!--<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">-->
+			<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">
+			  <ul class="nav nav-pills nav-stacked">
+				<li><a href='/'>Home</a></li>
+				<li><a href='/hardware/'>Add Hardware</a></li>
+				<li><a href='/registers/'>Load/Add Registers</a></li>
+				<li><a href='/plot/'>Plot Register Values</a></li>
+				<li><a href='/trigger/'>Trigger Alarms</a></li>
+			  </ul> 
+			</div> <!--well bs-sidebar affix-->
+		  </div> <!--col-sm-2-->
+		  <div class="col-sm-10">
+		  
+			<div class='container-fluid'>
+			<br><br>
+			   {% block content %}
+			   {% endblock %}
+			</div>
+		  </div>
+		</div> 
+	</div>
+	<footer>
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="#" target="blank">Contact</a> </a></p>
+		</div>
+	</footer>
+
+  </body>
+
+</html>

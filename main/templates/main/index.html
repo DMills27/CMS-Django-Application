@@ -1,0 +1,37 @@
+{% extends "base_template.html" %} 
+{% block content %}
+
+<div style="text-align:center"><!--<div class="container-fluid">
+    <div class="container-fluid">
+        <h3>TODO:</h3>
+        <ul>
+            <li>Take out trash</li>
+        </ul>
+        <button class='btn get-more'>Get More Todos</button>
+    </div>-->
+    <form class="form-inline">
+        <div class="form-group">
+            <h3>Add Registers</h3>
+            <!--{% csrf_token %}-->
+                <label class= "sr-only" for="todo">
+                <input class="form-control1" type="text" placeholder="Address">
+                <input class="form-control1" type="text" placeholder="Register">
+                <!--<input class="form-control2" type="text" placeholder="Value">-->
+                <button class="btn add-todo1" type="submit">Read</button>
+                <button class="btn add-todo1" type="submit">Write</button>
+
+                <label class= "sr-only" for="todo">
+                <!--</div>-->
+                <!--<button class="btn add-todo2" type="submit">Write</button>-->
+        </div>
+    </form> <br>
+</div>
+<!--</center>-->
+
+<div style="text-align:center">
+<!--<div style="display:inline">-->
+    <!--<button type="submit" class="btn btn-default" style="width: 32px; margin: 0 auto;">+</button>-->
+    <input type="button" id="txt" value="+" style="" />
+</div id="holder">
+{% endblock %}
+
